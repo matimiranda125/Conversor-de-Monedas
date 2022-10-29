@@ -1,13 +1,4 @@
 //SIMULADOR INTERACTIVO DE CONVERSOR DE UNIDADES
-//1 peso argentino son: 0.0065 dolares
-//1 peso argentino son: 6,32 pesos chilenos
-//1 peso argentino son: 31,52 pesos colombianos
-//1 peso argentino son: 0.27 pesos uruaguayos
-//1 peso argentino son: 0.0066 euros
-//1 peso argentino son: 0.0058 libra esterlina
-//1 peso argentino son: 0.034 reales brasileños
-//1 peso argentino son: 0.010 dolares australianos
-let pesoArgentino=parseInt(prompt("Ingrese la cantidad de pesos argentinos que quiere convertir"));
 let dolarEstadounidense= 0.0065;
 let pesoChileno= 6.32;
 let pesoUruguayo= 31.52;
@@ -23,12 +14,15 @@ let dolarCanadiense=0.0089;
 let Yen= 0.96;
 let rubloRuso=0.40;
 let liraTurca=0.12;
+
+do {
+    let pesoArgentino=parseInt(prompt("Ingrese la cantidad de pesos argentinos que quiere convertir"));
 alert("Monedas a las que se pueden convertir:\n Dolar Estadounidense (1)\n Pesos Chilenos (2)\n Pesos Colombianos (3)\n Euros (4)\n Pesos Uruguayos (5)\n Libra Esterlina (6)\n Real Brasileño (7)\n Dolar Australiano (8)\n Pesos Dominicanos (9)\n Pesos Mexicanos (10)\n Franco Suizo (11)\n Dolar Canadiense (12)\n Yen Japones (13)\n Rublo Ruso (14)\n Lira Turca (15)\n");
 let opcion=prompt("¿A que moneda desea convertir sus pesos argentinos?");
 if (opcion=="1") {
-        let pesoADolar=(pesoArgentino*dolarEstadounidense);
-        alert("Su conversión de $" +pesoArgentino + " pesos argentinos a dólares seria de: " + pesoADolar + " dólares");
-    } if (opcion=="2") {
+    let pesoADolar=(pesoArgentino*dolarEstadounidense);
+    alert("Su conversión de $" +pesoArgentino + " pesos argentinos a dólares seria de: " + pesoADolar + " dólares");
+} if (opcion=="2") {
     let pesoAChileno=(pesoArgentino*pesoChileno);
 alert("Su conversión de $" + pesoArgentino + " pesos argentinos a pesos chilenos seria de: " + pesoAChileno + " pesos chilenos");
 } if (opcion=="3") {
@@ -72,4 +66,5 @@ let pesoALiraturca=(pesoArgentino*liraTurca);
 alert("Su conversión de $" + pesoArgentino + " pesos argentinos a liras turcas seria de: " + pesoALiraturca + " liras turcas");
 }
 
-
+respuesta = prompt("¿Desea volver a convertir una moneda? (S/N)");
+} while (respuesta=="S" || respuesta=="s");
