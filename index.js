@@ -16,6 +16,7 @@ let rubloRuso=0.40;
 let liraTurca=0.12;
 
 do {
+    conversionBitcoin();
     let pesoArgentino=parseInt(prompt("Ingrese la cantidad de pesos argentinos que quiere convertir"));
 alert("Monedas a las que se pueden convertir:\n Dolar Estadounidense (1)\n Pesos Chilenos (2)\n Pesos Colombianos (3)\n Euros (4)\n Pesos Uruguayos (5)\n Libra Esterlina (6)\n Real Brasileño (7)\n Dolar Australiano (8)\n Pesos Dominicanos (9)\n Pesos Mexicanos (10)\n Franco Suizo (11)\n Dolar Canadiense (12)\n Yen Japones (13)\n Rublo Ruso (14)\n Lira Turca (15)\n");
 let opcion=prompt("¿A que moneda desea convertir sus pesos argentinos?");
@@ -64,7 +65,24 @@ alert("Su conversión de $" + pesoArgentino + " pesos argentinos a rublos rusos 
 } if (opcion=="15") {
 let pesoALiraturca=(pesoArgentino*liraTurca);
 alert("Su conversión de $" + pesoArgentino + " pesos argentinos a liras turcas seria de: " + pesoALiraturca + " liras turcas");
-}
 
 respuesta = prompt("¿Desea volver a convertir una moneda? (S/N)");
-} while (respuesta=="S" || respuesta=="s");
+} while (respuesta=="S" || respuesta=="s") {
+
+}
+
+/* FUNCIONES*/
+
+function conversionBitcoin(){
+    bitcoin = 0.000049;
+    let dolar=parseInt(prompt("Ingrese la cantidad de dolares que quiere convertir a la criptomoneda bitcoin"));
+    resul=dolar*bitcoin;
+    alert("El resultado de su conversión de " + dolar + " dolares a bitcoin es de: " + resul + " bitcoins");
+}
+
+
+
+
+
+    
+}
